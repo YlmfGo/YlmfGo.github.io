@@ -1,0 +1,300 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-Hans" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Chrome各版本下载链接整理 - 雪花易冷&#39;s Blog</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="雪花易冷">
+<meta name="description" content="Chrome还是不错的一个浏览器呢..">
+<meta name="keywords" content="">
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?14279565">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+</noscript>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="https://ylmfgo.tk">
+                首頁
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/archives">
+                歸檔
+            </a>
+            
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/OneText-Library_Poems.json">
+                
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                About
+            </a>
+            
+
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            雪花易冷&#39;s Blog
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">雪花易冷&#39;s Blog</div>
+        <div class="single-column-header-subtitle">一条咸鱼的博客</div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            雪花易冷's Blog
+        </div>
+        <div class="nav-subtitle">
+            隻言片語<br>於此匯聚
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            歸檔
+        </a>
+        
+
+        
+        
+        <a class="a-block nav-link-item false" href="/OneText-Library_Poems.json">
+            
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            About
+        </a>
+        
+
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="https://ylmfgo.tk">雪花易冷&#39;s Blog</a>
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper-text-only"
+                 style="background-image: url('')">
+                <div class="post-title">
+                    Chrome各版本下载链接整理
+                    <div class="post-meta">
+                        <time datetime="2018-09-15T09:50:37.000Z" itemprop="datePublished">
+                            2018-09-15 17:50
+                        </time>&nbsp;
+                        
+                        
+                        <i class="material-icons" style="">folder</i>
+                        
+                        <a href='/categories/软件/'>软件</a>
+                        
+                        
+    
+                        
+                        
+                        <i class="material-icons" style="">label</i>
+                        
+                        <a href='/tags/Chrome/'>Chrome</a>, 
+                        
+                        <a href='/tags/Chromium/'>Chromium</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <blockquote>
+<p>Chrome浏览器包括Stable正式版、Beta测试版、Dev开发版、Canary金丝雀版以及开源的Chromium版。</p>
+<p>从稳定性方面，Stable&gt;Beta&gt;Dev&gt;Canary&gt;Chromium，而更新的速度则正好相反 Chromium&gt;Canary&gt;Dev&gt;Beta&gt;Stable</p>
+<p>本文提供的是Windows下载链接（Chromium除外），其他平台请自行寻找</p>
+</blockquote>
+<ul>
+<li>Stable正式版32位：<a href="https://www.google.cn/chrome/browser/" target="_blank" rel="noopener">https://www.google.cn/chrome/browser/</a></li>
+</ul>
+<ul>
+<li>Stable正式版64位：<a href="https://www.google.cn/chrome/browser/?platform=win64" target="_blank" rel="noopener">https://www.google.cn/chrome/browser/?platform=win64</a></li>
+</ul>
+<ul>
+<li>Bata测试版32位：<a href="https://www.google.cn/chrome/browser/beta.html" target="_blank" rel="noopener">https://www.google.cn/chrome/browser/beta.html</a></li>
+</ul>
+<ul>
+<li>Bata测试版64位：<a href="https://www.google.cn/chrome/browser/beta.html?platform=win64" target="_blank" rel="noopener">https://www.google.cn/chrome/browser/beta.html?platform=win64</a></li>
+</ul>
+<ul>
+<li>Dev开发版32位：<a href="https://www.google.cn/chrome/browser/index.html?extra=devchannel" target="_blank" rel="noopener">https://www.google.cn/chrome/browser/index.html?extra=devchannel</a></li>
+</ul>
+<ul>
+<li>Dev开发版64位：<a href="https://www.google.cn/chrome/browser/index.html?extra=devchannel&platform=win64" target="_blank" rel="noopener">https://www.google.cn/chrome/browser/index.html?extra=devchannel&amp;platform=win64</a></li>
+</ul>
+<ul>
+<li>Canary金丝雀版32位：<a href="https://www.google.cn/chrome/browser/canary.html" target="_blank" rel="noopener">https://www.google.cn/chrome/browser/canary.html</a></li>
+</ul>
+<ul>
+<li>Canary金丝雀版64位：<a href="https://www.google.cn/chrome/browser/canary.html?platform=win64" target="_blank" rel="noopener">https://www.google.cn/chrome/browser/canary.html?platform=win64</a></li>
+</ul>
+<ul>
+<li>Chromium下载地址：<a href="https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html" target="_blank" rel="noopener">https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html</a> （需科学上网）</li>
+</ul>
+<p>下载地址均为Google官方下载地址，提供的链接都是非离线版的下载链接，可正常更新</p>
+
+                </div>
+            </div>
+    
+            <nav class="post-pagination">
+    
+    <a class="newer-posts" href="/%E7%8E%A9%E6%9C%BA/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%9C%A8Platina%E4%B8%8A%E8%A3%85Android%2010%20GSI/">
+        上一篇<br>记一次在Platina上刷入Android 10 GSI
+    </a>
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/%E6%95%99%E7%A8%8B/%E5%9C%A8Minecraft%E4%B8%AD%E5%9B%BD%E7%89%88%E9%87%8C%E8%A3%85%E8%87%AA%E5%B7%B1%E7%9A%84Mod/">
+        下一篇<br>在Minecraft中国版里装自己的Mod
+    </a>
+    
+</nav>
+
+    
+            
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zOTczNC8xNjI2MQ==">
+</div>
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="https://ylmfgo.tk">雪花易冷&#39;s Blog</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"
+        integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"
+        integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
+        integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?27447579"></script>
+
+
+<script type="text/javascript">
+    (function (d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+
+        if (typeof LivereTower === 'function') {
+            return;
+        }
+
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+</script>
+
+
+</body>
+</html>

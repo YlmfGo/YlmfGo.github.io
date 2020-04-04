@@ -1,0 +1,290 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-Hans" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>记一次在Platina上刷入Android 10 GSI - 雪花易冷&#39;s Blog</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="雪花易冷">
+<meta name="description" content="一次并不顺利的过程">
+<meta name="keywords" content="">
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?17415590">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+</noscript>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="https://ylmfgo.tk">
+                首頁
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/archives">
+                歸檔
+            </a>
+            
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/OneText-Library_Poems.json">
+                
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                About
+            </a>
+            
+
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            雪花易冷&#39;s Blog
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">雪花易冷&#39;s Blog</div>
+        <div class="single-column-header-subtitle">一条咸鱼的博客</div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            雪花易冷's Blog
+        </div>
+        <div class="nav-subtitle">
+            隻言片語<br>於此匯聚
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            歸檔
+        </a>
+        
+
+        
+        
+        <a class="a-block nav-link-item false" href="/OneText-Library_Poems.json">
+            
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            About
+        </a>
+        
+
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="https://ylmfgo.tk">雪花易冷&#39;s Blog</a>
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper-text-only"
+                 style="background-image: url('')">
+                <div class="post-title">
+                    记一次在Platina上刷入Android 10 GSI
+                    <div class="post-meta">
+                        <time datetime="2019-11-29T11:34:56.000Z" itemprop="datePublished">
+                            2019-11-29 19:34
+                        </time>&nbsp;
+                        
+                        
+                        <i class="material-icons" style="">folder</i>
+                        
+                        <a href='/categories/玩机/'>玩机</a>
+                        
+                        
+    
+                        
+                        
+                        <i class="material-icons" style="">label</i>
+                        
+                        <a href='/tags/玩机/'>玩机</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <blockquote>
+<p>最近发现我手上的Platina（小米8青春版）有了第三方维护者的Android 10 GSI补丁，先前在这部机子上跑Android 10 GSI的话摄像头是坏的，但现在已经修复了。根据他的介绍，目前GSI的话大bug基本是没有了，唯一的只有MTP文件传输的bug，可能会有些潜在的小bug。看到这里，我就决定想要尝鲜一下。</p>
+<p>这里选用的是来自phh的Evolution X 3.0的Android 10 GSI</p>
+</blockquote>
+<p>首先安装<a href="">Orange Fox</a>的Recovery</p>
+<p>做好有关相关软件和文件的备份，我这里是使用了钛备份</p>
+<p>然后重启到Recovery，清cache/davik cache/data/system并且格式化data</p>
+<p>刷入Oreo的底包</p>
+<p>再刷入phh的Evolution X 3.0系统镜像</p>
+<p>但是这部机子刷GSI重启后并不会那么顺利的开机，所以我们还需要刷入Permissiver和AllZygoteFix这两个补丁</p>
+<p>最后还要再刷入313的gpu驱动</p>
+<p>我还按照个人喜好刷入了Magisk（请注意，在这个GSI必须使用phh重新编译的Magisk，否则无法开机！）</p>
+<p>重启，进入系统！</p>
+<hr>
+<p>可是我这几天的使用体验下来并不是十分的顺畅</p>
+<p>uhmmm..</p>
+<p>一堆常用app频繁崩溃，我也不知道是EdXposed的问题还是我用了IFW的问题</p>
+<p>卸载EdXposed系统居然就开不了机了？？？</p>
+<p>直到有一天，我装了一个字体相关的Magisk Module</p>
+<p>直接开不了机了…</p>
+<p>好吧</p>
+<p>备份重启三清刷入MIUI</p>
+<blockquote>
+<p>愿你刷机半生，归来仍是MIUI</p>
+</blockquote>
+
+                </div>
+            </div>
+    
+            <nav class="post-pagination">
+    
+    <a class="newer-posts" href="/uncategorized/hello-world/">
+        上一篇<br>Hello World
+    </a>
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/%E8%BD%AF%E4%BB%B6/Chrome%E5%90%84%E7%89%88%E6%9C%AC%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5%E6%95%B4%E7%90%86/">
+        下一篇<br>Chrome各版本下载链接整理
+    </a>
+    
+</nav>
+
+    
+            
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zOTczNC8xNjI2MQ==">
+</div>
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="https://ylmfgo.tk">雪花易冷&#39;s Blog</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"
+        integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"
+        integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
+        integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?70073150"></script>
+
+
+<script type="text/javascript">
+    (function (d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+
+        if (typeof LivereTower === 'function') {
+            return;
+        }
+
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+</script>
+
+
+</body>
+</html>
